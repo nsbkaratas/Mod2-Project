@@ -19,9 +19,11 @@ const App=()=> {
  const [search, setSearch] = useState("")
 
  //state for cakes request
-const [cakes, setCakeURL]= useState([])
+// const [cakes, setCakeURL]= useState([])
+
  //state for cookies request
 const [cookies, setCookieURL]= useState([])
+
  //state for breakfast request
 const [breakfast, setBreakfastURL]= useState([])
 
@@ -39,19 +41,19 @@ const [breakfast, setBreakfastURL]= useState([])
  }
 
  //api call for cakes
-  useEffect(()=>{
-    console.log("useEffect")
-    const getCakesRecipes= async()=>{
-      try {
-        const response = await axios.get(`https://api.edamam.com/search?q=cake&app_id=${API_ID}&app_key=${API_KEY}`)
-        console.log(response)
-        setCakeURL(response.data.hits)
-      }catch(err){
-        console.log(err)
-      }
-    }
-    getCakesRecipes()
-  },[])
+  // useEffect(()=>{
+  //   console.log("useEffect")
+  //   const getCakesRecipes= async()=>{
+  //     try {
+  //       const response = await axios.get(`https://api.edamam.com/search?q=cake&app_id=${API_ID}&app_key=${API_KEY}`)
+  //       console.log(response)
+  //       setCakeURL(response.data.hits)
+  //     }catch(err){
+  //       console.log(err)
+  //     }
+  //   }
+  //   getCakesRecipes()
+  // },[])
 
    //api call for cookies
    useEffect(()=>{
@@ -101,7 +103,7 @@ const [breakfast, setBreakfastURL]= useState([])
           <Home recipesURL={recipesURL} onChange={e=>setSearch(e.target.value)} onSubmit={handleSubmit} value={search}/>
         </Route>
         <Route exact path="/cakes"  >
-          <Cakes cakes={cakes}/>
+          <Cakes />
         </Route>              
         <Route exact path="/cookies">
           <Cookies cookies={cookies}/>

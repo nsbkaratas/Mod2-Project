@@ -1,5 +1,5 @@
-import { searchRecipeReducer } from "./searchRecipeReducer";
+import cakeRecipesReducer from "./cakeRecipesReducer";
 import { combineReducers } from "redux";
 
-const reducer = combineReducers({searchRecipeReducer})
+const reducer = combineReducers({ cakeRecipesReducer })
 export default reducer
