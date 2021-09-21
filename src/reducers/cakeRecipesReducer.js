@@ -1,7 +1,7 @@
 import { CAKE_URL_START, CAKE_URL_SUCCESS, CAKE_URL_FAIL } from '../actions'
 
 const initialState = {
-    cakeURL: '',
+    cakeRecipe: [],
     error: '',
     isFetching: false,
 }
@@ -11,7 +11,7 @@ function cakeRecipesReducer(state = initialState, action) {
             return { ...state, isFetching: true }
 
         case CAKE_URL_SUCCESS:
-            return { ...state, cakeURL: action.payload, isFetching: false }
+            return { ...state, cakeRecipe: action.payload, isFetching: false }
 
         case CAKE_URL_FAIL:
 			return { ...state, error: action.payload, isFetching: false }
