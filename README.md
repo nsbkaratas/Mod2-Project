@@ -6,7 +6,7 @@
 
 ## 
 
- - [Link](https://dashboard.heroku.com/apps/mod2project/deploy/github)
+ - [Link](https://mod2project.herokuapp.com/)
  - [API](https://developer.edamam.com/edamam-docs-recipe-api)
  
   
