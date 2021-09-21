@@ -5,7 +5,7 @@ import getCakesRecipes from '../actions'
 
 const mapStateToProps = (state) => {
     console.log(state)
-    return { cakeRecipe: state.cakeRecipesReducer}
+    return { cakeRecipe: state.cakeRecipesReducer.cakeRecipe}
 }
 
 const Cakes = (props) => {
@@ -31,6 +31,21 @@ const Cakes = (props) => {
     
     return (
         <div>
+            <div>
+                {props.cakeRecipe.length > 0 ? props.cakeRecipe.map(cake=>
+                    <div className="cakes" >
+                        <h3>{cake.recipe.label}</h3>
+                        <br/>
+                        <img src={cake.recipe.image} alt=""></img>
+                        <div className="links">
+                        <a href={cake.recipe.url} target="_blank">Full Recipe</a>
+                        </div>
+                             
+                    </div>
+                ): null}
+            </div>
+
+
            {/* {cakeList} */}
         </div>
     )
