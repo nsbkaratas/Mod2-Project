@@ -1,6 +1,6 @@
-import instagram from "C:/Users/nsbka/Desktop/Homework/Projects/mod2-project/src/Images/instagram.png"
-import facebook from "C:/Users/nsbka/Desktop/Homework/Projects/mod2-project/src/Images/facebook.png"
-import twitter from "C:/Users/nsbka/Desktop/Homework/Projects/mod2-project/src/Images/twitter.png"
+import instagram from "../Images/instagram.png"
+import facebook from "../Images/facebook.png"
+import twitter from "../Images/twitter.png"
 
 
 const Footer = () => {
